@@ -1,9 +1,14 @@
 from stats import get_num_words
 from stats import num_unique_chars
 from stats import sort_chars
+import sys 
 
 def main():
-    filepath = "books/frankenstein.txt"
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    filepath = sys.argv[1]
+    sys.argv = ["books/frankenstein.txt"]
     text = get_book_text(filepath)
     num_words = get_num_words(text)
     num_chars = num_unique_chars(text)
