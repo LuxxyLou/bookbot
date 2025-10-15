@@ -19,10 +19,10 @@ def sort_chars(text):
         if char == "\n":
             display_char = "\\n"
         elif char == " ":
-            display_char = "' '"
+            display_char = " "
         else:
             display_char = char
-        result += f"'{display_char}': {count}\n"
+        result += f"{display_char}: {count}\n"
     return result
 
 def get_report(text):
